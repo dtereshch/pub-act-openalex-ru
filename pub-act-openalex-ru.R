@@ -49,7 +49,8 @@ urls <- map(pages, \(x) paste0(url, "&page=", as.character(x)))
 jsons <- map(urls, \(x) fromJSON(file = x))
 jsons_res <- map(jsons, \(x) x[["results"]])
 
-
+#bind_rows
+#see above
 
 
 
