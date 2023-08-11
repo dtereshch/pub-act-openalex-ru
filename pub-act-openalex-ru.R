@@ -35,11 +35,11 @@ sample0 <- as.data.frame(do.call(rbind, page0[["results"]]))
 
 sample1 <- sample0 %>% 
   select(display_name, type, geo, counts_by_year) %>% 
-  unnest(display_name) %>%
+  unnest(c(display_name, type)) %>%
   unnest(counts_by_year, keep_empty = TRUE) %>% # To overcome the first level of list
   unnest_wider(c(geo, counts_by_year), names_repair = "universal") %>%
   arrange(display_name, year) %>%
-  select(display_name, year, 
+  select(display_name, year, type,
          works_count, cited_by_count, 
          city, longitude, latitude)
 
@@ -71,7 +71,7 @@ df0 <- bind_rows(dfs)
 ### Unnest columns that still contain lists
 df1 <- df0 %>% 
   select(display_name, type, geo, counts_by_year) %>% 
-  unnest(display_name) %>%
+  unnest(c(display_name, type)) %>%
   unnest(counts_by_year, keep_empty = TRUE) %>% 
   unnest_wider(c(geo, counts_by_year), names_repair = "universal") %>%
   arrange(display_name, year) %>%
