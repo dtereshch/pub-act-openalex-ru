@@ -75,7 +75,7 @@ df1 <- df0 %>%
   unnest(counts_by_year, keep_empty = TRUE) %>% 
   unnest_wider(c(geo, counts_by_year), names_repair = "universal") %>%
   arrange(display_name, year) %>%
-  select(display_name, year, 
+  select(display_name, year, type,
          works_count, cited_by_count, 
          city, longitude, latitude)
 
