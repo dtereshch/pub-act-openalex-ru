@@ -80,4 +80,4 @@ df1 <- df0 %>%
          city, longitude, latitude)
 
 # Saving the data set ==========================================================
-df1 %>% write_csv("openalex_ru.csv")
+df1 %>% write_csv(paste0("openalex_ru_", Sys.Date() ,".csv"))
