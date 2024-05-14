@@ -74,7 +74,7 @@ oa_reg <- oa_inst_reg %>%
 oa_reg %>% summarise(across(everything(), \(x) sum(is.na(x))))
 
 ### There are some observations with missing data
-### Probably it is better to remove it from the dataframe
+### Probably removing it from the dataframe will not cause serioes problems
 oa_reg <- oa_reg %>% drop_na()
 
 ## Save data ===================================================================
