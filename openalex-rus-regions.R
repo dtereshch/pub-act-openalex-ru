@@ -72,7 +72,7 @@ oa_reg <- oa_inst_reg %>%
 
 ## Save data ===================================================================
 
-oa_inst_reg %>% write_csv(paste0("openalex_w_reg_", Sys.Date() ,".csv"))
-oa_reg %>% write_csv(paste0("openalex_regions_", Sys.Date() ,".csv"))
+oa_inst_reg %>% write_csv(paste0("openalex_ru_w_reg_", Sys.Date() ,".csv"))
+oa_reg %>% write_csv(paste0("openalex_rus_reg_", Sys.Date() ,".csv"))
 
 rm(list = ls())
