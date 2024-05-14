@@ -8,6 +8,7 @@
 
 library(readr)
 library(dplyr)
+library(tidyr)
 library(sf)
 library(lwgeom)
 
@@ -77,9 +78,28 @@ oa_reg %>% summarise(across(everything(), \(x) sum(is.na(x))))
 ### Probably removing it from the dataframe will not cause serioes problems
 oa_reg <- oa_reg %>% drop_na()
 
+### Do the same for spatial dataframe with 80 instead of 83 Russian regions
+### For details see https://github.com/dtereshch/rus-reg-80-spatial
+oa_inst_reg_80 <- oa_inst_sf %>% 
+  st_join(rus_reg_sf_80["NAME_1"], join = st_intersects, left = TRUE) %>%
+  rename(region_shp = NAME_1)
+
+oa_reg_80 <- oa_inst_reg_80 %>% 
+  st_drop_geometry() %>%
+  group_by(region_shp, year, type) %>%
+  summarise(works_count = sum(works_count, na.rm = TRUE),
+            cited_by_count = sum(cited_by_count, na.rm = TRUE),
+            inst_count = n()) %>%
+  ungroup()
+
+oa_reg_80 %>% summarise(across(everything(), \(x) sum(is.na(x))))
+
+oa_reg_80 <- oa_reg_80 %>% drop_na()
+
 ## Save data ===================================================================
 
 oa_inst_reg %>% write_csv(paste0("openalex_ru_w_reg_", Sys.Date() ,".csv"))
 oa_reg %>% write_csv(paste0("openalex_rus_reg_", Sys.Date() ,".csv"))
+oa_reg_80 %>% write_csv(paste0("openalex_rus_reg_80_", Sys.Date() ,".csv"))
 
 rm(list = ls())
