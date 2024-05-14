@@ -70,6 +70,13 @@ oa_reg <- oa_inst_reg %>%
             inst_count = n()) %>%
   ungroup()
 
+### Check missing values in the data
+oa_reg %>% summarise(across(everything(), \(x) sum(is.na(x))))
+
+### There are some observations with missing data
+### Probably it is better to remove it from the dataframe
+oa_reg <- oa_reg %>% drop_na()
+
 ## Save data ===================================================================
 
 oa_inst_reg %>% write_csv(paste0("openalex_ru_w_reg_", Sys.Date() ,".csv"))
