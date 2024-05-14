@@ -2,41 +2,64 @@
 # at subnational level (case of Russian regions)
 # by D. Tereshchenko
 
-# Loading packages =============================================================
+# Setup ========================================================================
+
+## Packages --------------------------------------------------------------------
 
 library(readr)
 library(dplyr)
 library(sf)
 library(lwgeom)
 
-# Loading the OpenAlex data ====================================================
+## Other -----------------------------------------------------------------------
 
-### Choose and load dataset needed 
-oa_inst <- read_csv("openalex_ru_2024-03-28.csv")
-oa_inst_compl <- oa_inst %>% drop_na()
+sf_use_s2(FALSE)      # fixes some problems: https://gis.stackexchange.com/questions/404385/r-sf-some-edges-are-crossing-in-a-multipolygon-how-to-make-it-valid-when-using
 
 
+# Loading the data =============================================================
 
-## Loading shp-file for Russian regions ----------------------------------------
-rus_shp <- st_read(paste0(shp_path, "gadm36_RUS_1.shp"), crs = 4326, quiet = TRUE)
-# rus_shp <- st_read(paste0(shp_path, "gadm36_RUS_1.shp"), crs = 4326, quiet = TRUE) %>% 
-#   st_transform_proj(crs = "+proj=longlat +lon_wrap=180") %>% 
-#   arrange(NAME_1)
+## OpenAlex data ---------------------------------------------------------------
+
+oa_inst <- read_csv("openalex_ru_2024-05-14.csv") ### Choose dataset needed 
+
+
+## Spatial dataframes for Russian regions --------------------------------------
+
+## Load two dataframes containing data fro 83 and 80 Russian regions
+load("rus_reg_sf.RData") # For details see https://github.com/dtereshch/rus-reg-80-spatial
+
+### Check geospatial dfs
+mean(st_is_valid(rus_reg_sf))
+rus_reg_sf[!st_is_valid(rus_reg_sf),]
+
+mean(st_is_valid(rus_reg_sf_80))
+rus_reg_sf_80[!st_is_valid(rus_reg_sf_80),]
+
+### Presumably the error is due to the projection transformation 
+### required to construct adequate maps
+st_crs(rus_reg_sf)
+st_crs(rus_reg_sf_80)
+
+### Change crs
+rus_reg_sf <- rus_reg_sf %>% st_set_crs(4326)
+rus_reg_sf_80 <- rus_reg_sf_80 %>% st_set_crs(4326)
+
+mean(st_is_valid(rus_reg_sf))
+mean(st_is_valid(rus_reg_sf_80))
+
+# Joining dataframes ===========================================================
 
 ## Spatial join ----------------------------------------------------------------
-oa_inst_sp <- st_as_sf(x = oa_inst_compl, 
+
+### Convert OpenAlex data to spatial df
+oa_inst_sf <- st_as_sf(x = oa_inst, 
                        coords = c("longitude", "latitude"), 
-                       crs = 4326)
-# oa_inst_sp <- st_as_sf(x = oa_inst_compl, 
-#                        coords = c("longitude", "latitude"), 
-#                        crs = 4326) %>%
-#   st_transform_proj(crs = "+proj=longlat +lon_wrap=180")
+                       crs = 4326) %>% st_transform_proj(crs = "+proj=longlat +lon_wrap=180")
 
-mean(sf::st_is_valid(rus_shp))
-mean(sf::st_is_valid(oa_inst_sp))
-#rus_shp[!sf::st_is_valid(rus_shp),]
+mean(sf::st_is_valid(oa_inst_sf))
 
-oa_inst_reg <- st_join(oa_inst_sp, rus_shp["NAME_1"], join = st_intersects, left = TRUE)
+### Add region column to the OpenAlex data frame
+oa_inst_reg <- st_join(oa_inst_sf, rus_reg_sf["NAME_1"], join = st_intersects, left = TRUE)
 
 ## Regions dataset -------------------------------------------------------------
 #number <- function(x, na.rm = TRUE){return(sum(!is.na(x)))}
