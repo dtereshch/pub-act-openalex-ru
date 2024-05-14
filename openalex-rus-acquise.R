@@ -3,6 +3,7 @@
 # by D. Tereshchenko
 
 # Loading packages =============================================================
+
 library(rjson)
 library(purrr)
 library(tidyr)
@@ -80,4 +81,5 @@ df1 <- df0 %>%
          city, longitude, latitude)
 
 # Saving the data set ==========================================================
+
 df1 %>% write_csv(paste0("openalex_ru_", Sys.Date() ,".csv"))
