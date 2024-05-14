@@ -20,6 +20,8 @@ In script `openalex-rus-regions.R` I aggregate OpenAlex data on subnational leve
 
 - Datasets with names starting with "openalex_rus_reg_" are long panels with OpenAlex data aggregated at regional level
 
+- Datasets with names starting with "openalex_rus_reg_80_" are long panels with OpenAlex data aggregated at regional level for 80 regions instead of 83 region. The Nenets Autonomous District is accounted for as part of the Arkhangelsk Region, and the Khanty-Mansiysk and Yamalo-Nenets Autonomous Districts are accounted for as part of the Tyumen Region ([details](https://github.com/dtereshch/rus-reg-80-spatial)).
+
 ## Variables
 
 - display_name: name of the institution
