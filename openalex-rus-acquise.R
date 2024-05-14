@@ -80,6 +80,16 @@ df1 <- df0 %>%
          works_count, cited_by_count, 
          city, longitude, latitude)
 
+### Check missing values in the data
+df1 %>% summarise(across(everything(), \(x) sum(is.na(x))))
+
+### There are some observations with missing data
+### Probably it is better to remove it from the dataframe
+df1 <- df1 %>% drop_na()
+
+
 # Saving the data set ==========================================================
 
 df1 %>% write_csv(paste0("openalex_ru_", Sys.Date() ,".csv"))
+
+rm(list = ls())
