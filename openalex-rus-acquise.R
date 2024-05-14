@@ -86,7 +86,7 @@ df1 <- df0 %>%
 df1 %>% summarise(across(everything(), \(x) sum(is.na(x))))
 
 ### There are some observations with missing data
-### Probably it is better to remove it from the dataframe
+### Probably removing it from the dataframe will not cause serioes problems
 df1 <- df1 %>% drop_na()
 
 
