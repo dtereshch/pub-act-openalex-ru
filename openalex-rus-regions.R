@@ -71,12 +71,6 @@ oa_reg <- oa_inst_reg %>%
             inst_count = n()) %>%
   ungroup()
 
-### Check missing values in the data
-oa_reg %>% summarise(across(everything(), \(x) sum(is.na(x))))
-
-### There are some observations with missing data
-### Probably removing it from the dataframe will not cause serioes problems
-oa_reg <- oa_reg %>% drop_na()
 
 ### Do the same for spatial dataframe with 80 instead of 83 Russian regions
 ### For details see https://github.com/dtereshch/rus-reg-80-spatial
@@ -92,9 +86,6 @@ oa_reg_80 <- oa_inst_reg_80 %>%
             inst_count = n()) %>%
   ungroup()
 
-oa_reg_80 %>% summarise(across(everything(), \(x) sum(is.na(x))))
-
-oa_reg_80 <- oa_reg_80 %>% drop_na()
 
 ## Save data ===================================================================
 
