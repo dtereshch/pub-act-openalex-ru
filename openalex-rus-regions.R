@@ -21,7 +21,7 @@ sf_use_s2(FALSE)      # fixes some problems: https://gis.stackexchange.com/quest
 
 ## OpenAlex data ---------------------------------------------------------------
 
-oa_inst <- read_csv("openalex_ru_2024-05-14.csv") ### Choose dataset needed 
+oa_inst <- read_csv("openalex_ru_2024-06-20.csv") ### Choose dataset needed 
 
 
 ## Spatial dataframes for Russian regions --------------------------------------
@@ -65,11 +65,15 @@ oa_inst_reg <- oa_inst_sf %>%
 
 oa_reg <- oa_inst_reg %>% 
   st_drop_geometry() %>%
+  full_join(rus_reg_sf["NAME_1"], by = c("region_shp" = "NAME_1")) %>% # add Chukotka
   group_by(region_shp, year, type) %>%
   summarise(works_count = sum(works_count, na.rm = TRUE),
             cited_by_count = sum(cited_by_count, na.rm = TRUE),
             inst_count = n()) %>%
   ungroup()
+
+### create complete dataset with all possible combinations of `region_shp`, `year`, and `type`
+oa_reg_comp <- oa_reg %>% complete(region_shp, year, type)
 
 
 ### Do the same for spatial dataframe with 80 instead of 83 Russian regions
@@ -80,17 +84,19 @@ oa_inst_reg_80 <- oa_inst_sf %>%
 
 oa_reg_80 <- oa_inst_reg_80 %>% 
   st_drop_geometry() %>%
+  full_join(rus_reg_sf["NAME_1"], by = c("region_shp" = "NAME_1")) %>% # add Chukotka
   group_by(region_shp, year, type) %>%
   summarise(works_count = sum(works_count, na.rm = TRUE),
             cited_by_count = sum(cited_by_count, na.rm = TRUE),
             inst_count = n()) %>%
   ungroup()
 
+oa_reg_80_comp <- oa_reg_80 %>% complete(region_shp, year, type)
 
 ## Save data ===================================================================
 
 oa_inst_reg %>% write_csv(paste0("openalex_ru_w_reg_", Sys.Date() ,".csv"))
-oa_reg %>% write_csv(paste0("openalex_rus_reg_", Sys.Date() ,".csv"))
-oa_reg_80 %>% write_csv(paste0("openalex_rus_reg_80_", Sys.Date() ,".csv"))
+oa_reg_comp %>% write_csv(paste0("openalex_rus_reg_", Sys.Date() ,".csv"))
+oa_reg_80_comp %>% write_csv(paste0("openalex_rus_reg_80_", Sys.Date() ,".csv"))
 
 rm(list = ls())
