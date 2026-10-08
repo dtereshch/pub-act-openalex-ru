@@ -89,6 +89,9 @@ df1 %>% summarise(across(everything(), \(x) sum(is.na(x))))
 ### Probably removing it from the dataframe will not cause serious problems
 df1 <- df1 %>% drop_na()
 
+### Remove year == 10000, since it makes no sense
+df1 <- df1 %>% filter(year != 10000)
+
 
 # Saving the data set ==========================================================
 
