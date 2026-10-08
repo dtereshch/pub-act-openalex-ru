@@ -21,7 +21,7 @@ sf_use_s2(FALSE)      # fixes some problems: https://gis.stackexchange.com/quest
 
 ## OpenAlex data ---------------------------------------------------------------
 
-oa_inst <- read_csv("openalex_ru_2024-06-20.csv") ### Choose dataset needed 
+oa_inst <- read_csv("openalex_ru_2026-10-08.csv") ### Choose dataset needed 
 
 
 ## Spatial dataframes for Russian regions --------------------------------------
