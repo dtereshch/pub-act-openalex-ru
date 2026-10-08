@@ -84,7 +84,7 @@ oa_inst_reg_80 <- oa_inst_sf %>%
 
 oa_reg_80 <- oa_inst_reg_80 %>% 
   st_drop_geometry() %>%
-  full_join(rus_reg_sf["NAME_1"], by = c("region_shp" = "NAME_1")) %>% # add Chukotka
+  full_join(rus_reg_sf_80["NAME_1"], by = c("region_shp" = "NAME_1")) %>% # add Chukotka
   group_by(region_shp, year, type) %>%
   summarise(works_count = sum(works_count, na.rm = TRUE),
             cited_by_count = sum(cited_by_count, na.rm = TRUE),

@@ -7767,7 +7767,6 @@ Institute for Nuclear Research,2023,facility,480,2626,Moscow,"c(37.61781, 55.752
 Institute for Nuclear Research,2024,facility,449,1414,Moscow,"c(37.61781, 55.75204)",Moscow City
 Institute for Nuclear Research,2025,facility,394,998,Moscow,"c(37.61781, 55.75204)",Moscow City
 Institute for Nuclear Research,2026,facility,281,90,Moscow,"c(37.61781, 55.75204)",Moscow City
-Institute for Nuclear Research,10000,facility,1,0,Moscow,"c(37.61781, 55.75204)",Moscow City
 Institute for Physics and Power Engineering,2010,facility,97,1317,Obninsk,"c(36.61238, 55.10993)",Kaluga
 Institute for Physics and Power Engineering,2011,facility,84,1216,Obninsk,"c(36.61238, 55.10993)",Kaluga
 Institute for Physics and Power Engineering,2012,facility,94,1160,Obninsk,"c(36.61238, 55.10993)",Kaluga
@@ -9292,7 +9291,6 @@ Institute of Geography,2023,facility,468,1422,Moscow,"c(37.61781, 55.75204)",Mos
 Institute of Geography,2024,facility,441,711,Moscow,"c(37.61781, 55.75204)",Moscow City
 Institute of Geography,2025,facility,366,353,Moscow,"c(37.61781, 55.75204)",Moscow City
 Institute of Geography,2026,facility,234,42,Moscow,"c(37.61781, 55.75204)",Moscow City
-Institute of Geography,10000,facility,259,187,Moscow,"c(37.61781, 55.75204)",Moscow City
 Institute of Geology Ufa Scientific Center,2010,facility,20,129,Ufa,"c(55.9428939819336, 54.7281265258789)",Bashkortostan
 Institute of Geology Ufa Scientific Center,2011,facility,13,69,Ufa,"c(55.9428939819336, 54.7281265258789)",Bashkortostan
 Institute of Geology Ufa Scientific Center,2012,facility,16,261,Ufa,"c(55.9428939819336, 54.7281265258789)",Bashkortostan
@@ -10436,7 +10434,6 @@ Institute of Philosophy,2023,facility,348,152,Moscow,"c(37.6460571289063, 55.744
 Institute of Philosophy,2024,facility,288,91,Moscow,"c(37.6460571289063, 55.7449531555176)",Moscow City
 Institute of Philosophy,2025,facility,185,31,Moscow,"c(37.6460571289063, 55.7449531555176)",Moscow City
 Institute of Philosophy,2026,facility,158,2,Moscow,"c(37.6460571289063, 55.7449531555176)",Moscow City
-Institute of Philosophy,10000,facility,44,0,Moscow,"c(37.6460571289063, 55.7449531555176)",Moscow City
 Institute of Physical Materials Science,2011,facility,2,4,Ulan-Ude,"c(107.600364685059, 51.8281288146973)",Buryat
 Institute of Physical Materials Science,2012,facility,21,102,Ulan-Ude,"c(107.600364685059, 51.8281288146973)",Buryat
 Institute of Physical Materials Science,2013,facility,23,111,Ulan-Ude,"c(107.600364685059, 51.8281288146973)",Buryat
@@ -10803,7 +10800,6 @@ Institute of Psychology,2023,facility,242,468,Moscow,"c(37.6473617553711, 55.819
 Institute of Psychology,2024,facility,188,254,Moscow,"c(37.6473617553711, 55.8193664550781)",Moscow City
 Institute of Psychology,2025,facility,171,89,Moscow,"c(37.6473617553711, 55.8193664550781)",Moscow City
 Institute of Psychology,2026,facility,106,11,Moscow,"c(37.6473617553711, 55.8193664550781)",Moscow City
-Institute of Psychology,10000,facility,648,720,Moscow,"c(37.6473617553711, 55.8193664550781)",Moscow City
 Institute of Psychology and Pedagogy,2010,education,2,1,Moscow,"c(37.7041625976563, 55.8093109130859)",Moscow City
 Institute of Psychology and Pedagogy,2014,education,1,0,Moscow,"c(37.7041625976563, 55.8093109130859)",Moscow City
 Institute of Psychology and Pedagogy,2015,education,3,1,Moscow,"c(37.7041625976563, 55.8093109130859)",Moscow City
@@ -11030,7 +11026,6 @@ Institute of Sociology,2023,facility,284,414,Moscow,"c(37.5764083862305, 55.6767
 Institute of Sociology,2024,facility,292,214,Moscow,"c(37.5764083862305, 55.6767921447754)",Moscow City
 Institute of Sociology,2025,facility,254,85,Moscow,"c(37.5764083862305, 55.6767921447754)",Moscow City
 Institute of Sociology,2026,facility,155,8,Moscow,"c(37.5764083862305, 55.6767921447754)",Moscow City
-Institute of Sociology,10000,facility,26,20,Moscow,"c(37.5764083862305, 55.6767921447754)",Moscow City
 Institute of Solar-Terrestrial Physics,2010,facility,112,1827,Irkutsk,"c(104.264122009277, 52.2483978271484)",Irkutsk
 Institute of Solar-Terrestrial Physics,2011,facility,155,2046,Irkutsk,"c(104.264122009277, 52.2483978271484)",Irkutsk
 Institute of Solar-Terrestrial Physics,2012,facility,84,1240,Irkutsk,"c(104.264122009277, 52.2483978271484)",Irkutsk
@@ -14249,7 +14244,6 @@ Lomonosov Moscow State University,2023,education,14124,54688,Moscow,"c(37.61781,
 Lomonosov Moscow State University,2024,education,13418,32299,Moscow,"c(37.61781, 55.75204)",Moscow City
 Lomonosov Moscow State University,2025,education,12308,12526,Moscow,"c(37.61781, 55.75204)",Moscow City
 Lomonosov Moscow State University,2026,education,8805,1663,Moscow,"c(37.61781, 55.75204)",Moscow City
-Lomonosov Moscow State University,10000,education,1,0,Moscow,"c(37.61781, 55.75204)",Moscow City
 Lukoil (Russia),2010,company,9,18,Moscow,"c(37.7367286682129, 55.8072166442871)",Moscow City
 Lukoil (Russia),2011,company,6,14,Moscow,"c(37.7367286682129, 55.8072166442871)",Moscow City
 Lukoil (Russia),2012,company,18,62,Moscow,"c(37.7367286682129, 55.8072166442871)",Moscow City
@@ -17567,7 +17561,6 @@ North-East Interdisciplinary Scientific Research Institute,2023,facility,73,223,
 North-East Interdisciplinary Scientific Research Institute,2024,facility,56,114,Magadan,"c(150.80347, 59.5638)",Maga Buryatdan
 North-East Interdisciplinary Scientific Research Institute,2025,facility,56,48,Magadan,"c(150.80347, 59.5638)",Maga Buryatdan
 North-East Interdisciplinary Scientific Research Institute,2026,facility,43,7,Magadan,"c(150.80347, 59.5638)",Maga Buryatdan
-North-East Interdisciplinary Scientific Research Institute,10000,facility,1,0,Magadan,"c(150.80347, 59.5638)",Maga Buryatdan
 North-Eastern Federal University,2010,education,6,82,Yakutsk,"c(129.72288, 62.03114)",Sakha
 North-Eastern Federal University,2011,education,27,111,Yakutsk,"c(129.72288, 62.03114)",Sakha
 North-Eastern Federal University,2012,education,57,1249,Yakutsk,"c(129.72288, 62.03114)",Sakha
@@ -21004,7 +20997,6 @@ Russian Academy of Sciences,2024,government,29734,65939,Moscow,"c(37.61781, 55.7
 Russian Academy of Sciences,2025,government,24837,27484,Moscow,"c(37.61781, 55.75204)",Moscow City
 Russian Academy of Sciences,2026,government,16022,2678,Moscow,"c(37.61781, 55.75204)",Moscow City
 Russian Academy of Sciences,2027,government,2,0,Moscow,"c(37.61781, 55.75204)",Moscow City
-Russian Academy of Sciences,10000,government,2,0,Moscow,"c(37.61781, 55.75204)",Moscow City
 Russian Association of Computer Science in Sport,2019,nonprofit,2,4,Moscow,"c(37.61556, 55.75222)",Moscow City
 Russian Association of Computer Science in Sport,2020,nonprofit,2,0,Moscow,"c(37.61556, 55.75222)",Moscow City
 Russian Association of Computer Science in Sport,2022,nonprofit,1,1,Moscow,"c(37.61556, 55.75222)",Moscow City
@@ -22933,7 +22925,6 @@ Samara State Medical University,2023,education,713,1749,Samara,"c(50.13553, 53.2
 Samara State Medical University,2024,education,787,1168,Samara,"c(50.13553, 53.20767)",Samara
 Samara State Medical University,2025,education,880,416,Samara,"c(50.13553, 53.20767)",Samara
 Samara State Medical University,2026,education,568,30,Samara,"c(50.13553, 53.20767)",Samara
-Samara State Medical University,10000,education,5,22,Samara,"c(50.13553, 53.20767)",Samara
 Samara State Technical University,2010,education,143,389,Samara,"c(50.13553, 53.20767)",Samara
 Samara State Technical University,2011,education,320,1000,Samara,"c(50.13553, 53.20767)",Samara
 Samara State Technical University,2012,education,297,570,Samara,"c(50.13553, 53.20767)",Samara
@@ -24710,7 +24701,6 @@ Southern Federal University,2023,education,2507,10906,Rostov-on-Don,"c(39.70769,
 Southern Federal University,2024,education,2287,6597,Rostov-on-Don,"c(39.70769, 47.21997)",Rostov
 Southern Federal University,2025,education,1864,2202,Rostov-on-Don,"c(39.70769, 47.21997)",Rostov
 Southern Federal University,2026,education,1186,191,Rostov-on-Don,"c(39.70769, 47.21997)",Rostov
-Southern Federal University,10000,education,1,8,Rostov-on-Don,"c(39.70769, 47.21997)",Rostov
 "Southern Sakhalin Institute of Economics, Law and Computer Science",2015,education,1,1,Yuzhno-Sakhalinsk,"c(142.758422851562, 46.9386215209961)",Sakhalin
 Southern Scientific Center,2010,facility,111,1337,Rostov-on-Don,"c(39.70769, 47.21997)",Rostov
 Southern Scientific Center,2011,facility,122,1552,Rostov-on-Don,"c(39.70769, 47.21997)",Rostov
@@ -24894,7 +24884,6 @@ St. Petersburg Department of Steklov Institute of Mathematics,2023,facility,197,
 St. Petersburg Department of Steklov Institute of Mathematics,2024,facility,215,258,Saint Petersburg,"c(30.3427543640137, 59.9339790344238)",City of St. Petersburg
 St. Petersburg Department of Steklov Institute of Mathematics,2025,facility,128,100,Saint Petersburg,"c(30.3427543640137, 59.9339790344238)",City of St. Petersburg
 St. Petersburg Department of Steklov Institute of Mathematics,2026,facility,106,15,Saint Petersburg,"c(30.3427543640137, 59.9339790344238)",City of St. Petersburg
-St. Petersburg Department of Steklov Institute of Mathematics,10000,facility,1,1,Saint Petersburg,"c(30.3427543640137, 59.9339790344238)",City of St. Petersburg
 St. Petersburg Institute for Informatics and Automation,2010,facility,55,1045,St Petersburg,"c(30.31413, 59.93863)",City of St. Petersburg
 St. Petersburg Institute for Informatics and Automation,2011,facility,61,888,St Petersburg,"c(30.31413, 59.93863)",City of St. Petersburg
 St. Petersburg Institute for Informatics and Automation,2012,facility,67,1334,St Petersburg,"c(30.31413, 59.93863)",City of St. Petersburg
@@ -25834,7 +25823,6 @@ Steklov Mathematical Institute,2023,facility,749,2034,Moscow,"c(37.61781, 55.752
 Steklov Mathematical Institute,2024,facility,715,1150,Moscow,"c(37.61781, 55.75204)",Moscow City
 Steklov Mathematical Institute,2025,facility,535,509,Moscow,"c(37.61781, 55.75204)",Moscow City
 Steklov Mathematical Institute,2026,facility,421,63,Moscow,"c(37.61781, 55.75204)",Moscow City
-Steklov Mathematical Institute,10000,facility,1,1,Moscow,"c(37.61781, 55.75204)",Moscow City
 Stockholm School of Economics in Russia,2010,education,1,64,Saint Petersburg,"c(30.3246326446533, 59.9387435913086)",City of St. Petersburg
 Stockholm School of Economics in Russia,2011,education,1,18,Saint Petersburg,"c(30.3246326446533, 59.9387435913086)",City of St. Petersburg
 Stockholm School of Economics in Russia,2012,education,2,78,Saint Petersburg,"c(30.3246326446533, 59.9387435913086)",City of St. Petersburg
